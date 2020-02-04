@@ -1,0 +1,23 @@
+.contact{
+    max-width:1920px;
+    width:100%;
+    background: #fff;
+    padding-top: 117px;
+    padding-bottom: 200px;
+    &__left-text{
+        border:none;
+    }
+    &__title{
+        margin-bottom: 50px;
+    }
+    &__text{
+        font-size: 14px;
+    }
+    &__form-item{
+        margin-bottom: 24px;
+        height: 60px;
+    }
+    &__submit-btn{
+        background-color: #ED4C5C;
+    }
+}

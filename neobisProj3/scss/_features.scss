@@ -1,0 +1,38 @@
+.features{
+    max-width:1920px;
+    width:100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 63px;
+    padding-bottom: 104px;
+    &__title{
+        margin-bottom: 50px;
+    }
+    &__card{
+        height: 223px;
+        position: relative;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .card-img-overlay{
+        padding-right: 45px;
+        padding-left: 45px;
+    }
+    &__bg-num{
+        font-size: 100px;
+        font-weight: bold;
+        color: rgba(16, 16, 16, 0.08);
+        margin-top: -50px;
+    }
+    &__img{
+        margin-top: 50px;
+    }
+    &__h4{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    &__text{
+        font-size: 12px;
+        font-weight: 600;
+    }
+}

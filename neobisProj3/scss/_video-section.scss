@@ -1,0 +1,32 @@
+.video-section{
+    max-width:1920px;
+    width:100%;
+    background-color: #ffffff;
+    padding-top: 94px;
+    padding-bottom: 95px;
+    &__title{
+        margin-bottom: 34px;
+    }
+    &__text{
+        font-size: 14px;
+        text-align: justify;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    &__link{
+        color: #ED4C5C;
+    }
+
+    &__video{
+       position: relative;
+       height: 311px;
+       background-image: url('../img/Video_bg.png');
+       background-repeat: no-repeat;
+    }
+    &__play-button{
+        cursor: pointer;
+        position: absolute; 
+        left: -33px;
+        align-self: center;
+    }
+}

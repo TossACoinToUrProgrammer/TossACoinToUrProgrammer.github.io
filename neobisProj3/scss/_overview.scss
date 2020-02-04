@@ -1,0 +1,50 @@
+.overview{
+    max-width:1920px;
+    width:100%;
+    background-color: #FAFAFA;
+    text-align: center;
+    padding-bottom: 124px;
+    padding-top: 63px;
+    &__title{
+        margin-bottom: 63px;
+    }
+    &__card{
+        position: relative;
+        height: 355px;
+        display: flex;
+        align-items:start;
+        justify-content: center;
+        margin-bottom: 40px;
+    }  
+    &__over-text{
+        width: 293px;
+        height: 198px;
+        border-radius:8px;
+        background: #ffffff;
+        color: #101010;
+        padding: 32px;
+        position: absolute;
+        bottom: 0;
+        @media(max-width:415px){
+            width: 80%;
+        } 
+    }
+    &__h4{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    &__text{
+        font-size: 12px;
+        margin-bottom:25px;
+    }
+    &__link{
+        color: #ED4C5C;
+        font-size: 12px;
+    }
+    &__img{
+        @media(max-width:415px){
+            width: 80%;
+        } 
+    }
+}

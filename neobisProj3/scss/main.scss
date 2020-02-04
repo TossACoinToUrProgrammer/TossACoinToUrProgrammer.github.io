@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:'Lato',sans-serif;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    color:#000000;
+}
+h2{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+}
+@import 'header';
+@import 'video-section';
+@import 'overview';
+@import 'features';
+@import 'app-download';
+@import 'contact';
+@import 'footer';

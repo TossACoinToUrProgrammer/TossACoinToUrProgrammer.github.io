@@ -1,0 +1,43 @@
+.app-download{
+    max-width:1920px;
+    width:100%;
+    background: #ED4C5C;
+    padding-top: 63px;
+    padding-bottom: 95px;
+    &__title{
+        margin-top: 50px;
+        margin-bottom: 24px;
+    }
+    &__text{
+        text-align: justify;
+        width: 100%;
+        font-size: 14px;
+    }
+    &__link{
+        margin-right: 25px;
+    }
+
+    &__slider{
+        padding: 50px;
+        display:flex;   
+        align-items: center;
+        justify-content: center;
+    }
+    &__img-bg{
+        width: 45%;
+        height: 267px;
+        @media(max-width:768px){
+            width: 55%;
+            height: 120%;
+            margin-top: 20px;
+        }
+    }
+    &__img{
+        margin-top: 10px;
+        @media(max-width:768px){
+            width: 80%;
+            
+        }
+    }
+}
+
