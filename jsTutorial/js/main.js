@@ -303,7 +303,7 @@ let doList = document.getElementById("toDoList");
 function addElemToList() {
   let item = prompt("Add element");
   if (item != "Отмена" && item != "отмена" && item != ""&&item!=null) {
-    doList.innerHTML += `<input type="checkbox" style="float:left;"><ul>${item}</ul>`;
+    doList.innerHTML += `<ul>${item}</ul>`;
     addElemToList();
   } 
 }
