@@ -1,0 +1,38 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4em;
+}
+.DoList__section{
+    display:flex;
+    justify-content: center;
+}
+.active{
+    color: grey !important;
+  }
+.active p{
+  color: grey!important;
+}
+.close {
+  color: grey;
+}
+.DoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px rgb(124, 16, 58) solid;
+  min-height: 600px;
+  width: 800px;
+}
+.DoList__elem {
+  cursor: pointer;
+  padding: 5px;
+  width: 600px;
+  border: 1px rgb(238, 101, 181) solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.done{
+    border: 2px rgb(161, 17, 101) solid;
+    color:white;
+}
