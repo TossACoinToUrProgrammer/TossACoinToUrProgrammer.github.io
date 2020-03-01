@@ -15,7 +15,7 @@ fetchAsync(urlCategories)
     }
     div.innerHTML += `</ul>`;
   })
-  .catch(error => ConstantSourceNode.error(error));
+  .catch(error => console.error(error));
 
 function findGif() {
   const input = document.querySelector(".find-gif__input").value;
