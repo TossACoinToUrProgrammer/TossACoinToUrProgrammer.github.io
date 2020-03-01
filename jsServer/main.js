@@ -22,7 +22,7 @@ function findGif() {
   let div = document.querySelector(".find-gif__gifs");
   div.innerHTML = "";
   fetchAsync(
-    `http://api.giphy.com/v1/gifs/search?q=${input}&api_key=tdTHeamDvNzxOkO2RPScG1ikdVBHe1OM`
+    `https://api.giphy.com/v1/gifs/search?q=${input}&api_key=tdTHeamDvNzxOkO2RPScG1ikdVBHe1OM`
   ).then(response => {
     for (i in response["data"]) {
       div.innerHTML += `<img src="${response["data"][i]["images"]["original"]["url"]}">`;
