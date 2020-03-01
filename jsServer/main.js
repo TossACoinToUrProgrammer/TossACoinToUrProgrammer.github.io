@@ -27,5 +27,5 @@ function findGif() {
     for (i in response["data"]) {
       div.innerHTML += `<img src="${response["data"][i]["images"]["original"]["url"]}">`;
     }
-  });
+  }).catch(err=>console.error(err));
 }
