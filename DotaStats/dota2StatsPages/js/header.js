@@ -1,5 +1,5 @@
 import { redirectPageWithParams } from "./workWithUrl.js";
-
+console.log('header.js');
 let showSearchForm = (selector) => {
   document.querySelectorAll(".header__searchForm").forEach((item) => {
     if (!Array.from(item.classList).includes(selector.split(".")[1])) {
@@ -20,10 +20,12 @@ document.querySelector(".header__players-link").onclick = (e) => {
   showSearchForm(".player-search");
 };
 document.querySelector('.player-search .search__btn').onclick=()=>{
+  console.log('player search header');
     let text = document.querySelector('.header__searchForm .playerSearchInput').textContent;
     redirectPageWithParams('players.html', 'player', text);
 }
 document.querySelector('.match-search .search__btn').onclick=()=>{
+  console.log('match search header');
     let text = document.querySelector('.header__searchForm .matchSearchInput').textContent;
     redirectPageWithParams('matches.html', 'match', text);
 }
