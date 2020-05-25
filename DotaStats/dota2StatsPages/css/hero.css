@@ -1,0 +1,143 @@
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.hero__header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.hero__base-info{
+    max-width: 500px;
+}
+.hero__players-list{
+    background-color: rgba(6, 36, 44, 0.6);
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    padding: 40px;
+}
+.hero__players-item img{
+    width: 100px;
+    cursor: pointer;
+}
+.hero__players-item:hover img{
+    width: 96px;
+    border:4px solid rgba(93, 56, 194, 0.6);
+}
+
+.inside-content{
+    max-width: 90%;
+    max-width: 1981px;
+    margin: auto;
+}
+.tab-content{
+    background-color: rgba(9, 52, 63, 0.6);
+}
+.tab-link{
+    margin-right: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.active-link{
+    background-color: rgba(9, 52, 63, 0.6);
+}
+.hero-stats{
+    padding: 20px;
+}
+.hero__roles{
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.hero__role{
+    margin: 3px;
+}
+.section{
+    margin-top: 30px;
+}
+.section>ul{
+
+    background-color: rgba(6, 36, 44, 0.6);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 60% 35%;
+    justify-content: space-between;   
+    width: 100%;
+}
+.hero__popularity-list{
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.hero__popularity-item{
+    display: flex;
+    flex-flow: column;
+}
+.hero__popularity-item>img{
+    width: 80px;
+}
+.hero__popularity-item h2{
+    text-align: center;
+}
+.hero__popularity-total, .matchups__item-total{
+    color: rgb(173, 158, 68);
+}
+.hero__popularity-win, .matchups__item-win{
+    color: rgb(27, 161, 27);
+}
+
+.hero__matchups-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.hero__matchups-item{   
+    min-width: 30%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: column;
+}
+.matchups__item-name{
+    max-width: 100px;
+    height: 20px;
+    word-wrap: none;
+    overflow: hidden;
+}
+.matchups__item-img{
+    width: 90px;
+    cursor: pointer;
+}
+.matchups__item-img:hover{
+    opacity: 0.6;
+}
+.matchups__item-result{
+    width: 90px;
+    border:2px inset rgb(207, 172, 16);
+    display: flex;
+    font-size: 15px;
+    background-color: rgba(17, 27, 22, 0.7);
+}
+.item-build__item{
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.item>img{
+    width: 50px;
+    height: 40px;
+}
+.item:hover .item__modal{
+    display: block;
+}
+.item-build__list>ul{
+    padding: 20px;
+}

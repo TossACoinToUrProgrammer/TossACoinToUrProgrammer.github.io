@@ -1,0 +1,119 @@
+
+li{
+    list-style: none;
+}
+.player__info{
+    display: flex;
+    width: 800px;
+    justify-content: start;
+
+}
+.player__info>img{
+    margin-right: 30px;
+}
+.player__wl h3{
+    color: orange;
+}
+.player__info a{
+    color: white;
+}
+ul.player__recent-matches,ul.player__heroes{
+    padding: 15px;
+    background-color:rgba(10,10,60, 0.2);
+}
+ul.player__heroes{
+    display: none;
+}
+.player__recent-match, .player__hero{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-family: 'Rubik';
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+.player__recent-match:hover,.player__hero:hover{
+    background-color: rgba(82, 216, 221, 0.4);
+}
+.player__recent-match>li, .player__hero>li{
+    min-width: 20px;
+    margin-right: 5px;
+    font-size: 14px;
+    font-family: 'Rubik';
+    text-align: center;
+}
+.item__match-id{
+    width: 80px;
+    font-size: 12px !important;
+}
+.item__hero{
+    width: 100px;
+    font-size: 12px !important;
+    text-align: left !important;
+}
+.item__hero-icon{
+    margin-right: 5px;
+    width: 50px;
+}
+.item__hero-icon img{
+    width: 50px;
+}
+.item__lastHitsDen{
+    width: 50px;
+}
+.item__dmg{
+    width: 80px;
+}
+.item__gpm{
+    color:gold;
+    width: 40px;
+}
+.item__xpm{
+    color: goldenrod;
+    width: 40px;
+}
+.item__deaths{
+    color:rgb(151, 151, 151);
+    font-style: italic;
+
+}
+.item__kills{
+    color:rgb(126, 17, 7);
+    font-style: italic;
+
+}
+.item__assists{
+    color:rgb(90, 202, 118);
+    font-style: italic;
+
+}
+.item__towerDmg{
+    width: 40px;
+}
+.item__result{
+    width: 50px;
+}
+.win{
+    color: rgb(40, 182, 35);
+    font-size: 18px !important;
+}
+.lose{
+    color: rgb(21, 175, 189);
+    font-size: 18px !important;
+}
+.item__hero-total, .item__hero-wins, .item__hero-loses {
+    width: 60px;
+}
+.item__hero-wins{
+    color: rgb(40, 182, 35);
+}
+.player__totals{
+    display: none;
+    padding: 20px;
+}
+.player__total{
+    display: flex;
+}
+.player__total p{
+    color:orange;
+}
