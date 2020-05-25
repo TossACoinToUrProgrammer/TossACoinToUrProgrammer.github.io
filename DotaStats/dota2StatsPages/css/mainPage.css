@@ -17,7 +17,7 @@ header {
       rgba(143, 73, 192, 0.3),
       rgba(9, 109, 100, 0.1)
     ),
-    url("/img/c632b3bc2ec8f30871d02bb21d3e29e2.jpg") !important;
+    url("../img/c632b3bc2ec8f30871d02bb21d3e29e2.jpg") !important;
   background-size: cover;
   height: 100vh;
   padding-bottom: 30px;
