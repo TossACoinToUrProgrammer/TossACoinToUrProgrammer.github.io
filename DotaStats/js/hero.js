@@ -12,7 +12,7 @@ window.onload = () => {
 const addMatchupsToPage=async(hero,heroes)=>{
     let content = document.querySelector('.hero__matchups-list');
     let contentCopy = content.innerHTML;
-    content.innerHTML='<img class="preloader" src="/img/preloader.gif">';
+    content.innerHTML='<img class="preloader" src="../img/preloader.gif">';
     let matchups = await getHeroMatchups(hero.id);
     console.log('matchups');
     matchups=matchups.slice(0,20);
@@ -36,7 +36,7 @@ const addMatchupsToPage=async(hero,heroes)=>{
 const addPlayersToPage=async(hero)=>{
     let content = document.querySelector('.hero__players-list');
     let contentCopy = content.innerHTML;
-    content.innerHTML='<img class="preloader" src="/img/preloader.gif">';
+    content.innerHTML='<img class="preloader" src="../img/preloader.gif">';
     let players = await getHeroPlayers(hero.id);
     players=players.slice(0,4);
     content.innerHTML=contentCopy;
@@ -97,7 +97,7 @@ let heroes = getHeroesStats();
 const getHero=async(id)=>{
   let content = document.querySelector('.content');
   let contentCopy = content.innerHTML;
-  content.innerHTML='<img class="preloader" src="/img/preloader.gif">';
+  content.innerHTML='<img class="preloader" src="../img/preloader.gif">';
   let hero = getHeroFromApi(heroes, id);
   console.log('hero');
   content.innerHTML=contentCopy;
