@@ -127,7 +127,7 @@ const setDataToPage = (match, err = "") => {
 const getMatch = (matchId) => {
   let content = document.querySelector('.content');
   let contentCopy = content.innerHTML;
-  content.innerHTML='<img class="preloader" src="/img/preloader.gif">';
+  content.innerHTML='<img class="preloader" src="../img/preloader.gif">';
   //Получаем матч из сервера и вставляем ее id в url, 
   //вызываем функцию setDataToPage чтобы вставить данные в страницу
   let result = getMatchFromApi(matchId);
