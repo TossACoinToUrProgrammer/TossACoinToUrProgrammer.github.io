@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon-16x16.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <title>Stats Dota2</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="header__logo">
+                <img class="header__logo-img" src="../img/logo.png" alt="logo">
+                <div class="header__logo-text">Dota 2 Stats</div>
+            </div>
+            <div class="header__navbar">
+                <a href="index.html">Main</a>
+                <a href="matches.html" class="header__matches-link">Matches</a>
+                <a href="heroes.html">Heroes</a>
+                <a href="players.html" class='header__players-link'>Players</a>
+            </div>
+        </div>
+        <div class="header__searchForm player-search">
+            <div class="search-form">
+                <input name='player' required placeholder="Enter player's id..." type="text" class="header__player-search-input">
+                <button class="header__player-search-btn">search</button>
+            </div>
+        </div>
+        <div class="header__searchForm match-search">
+            <div class="search-form">
+                <input name='match' required placeholder="Enter match id..." type="text" class="header__match-search-input">
+                <button class="header__match-search-btn">search</button>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class='inside-content'>
+            <ul class='tab-links'>
+                <li id='heroes__table' class='tab-link '>
+                    <a href='heroes.html'>
+                        <h3>All Heroes</h3>
+                    </a>
+                </li>
+                <li id='hero-stats' class='tab-link active-link'>
+                    <h3>Hero Stats</h3>
+                </li>
+            </ul>
+            <div class="hero-stats tab-content">
+                <div class='hero__header'>
+                    <div class="hero__base-info">
+                        <div class="hero__img">
+                            <img src="" alt="">
+                        </div>
+                        <h2 class="hero__name"></h2>
+                        <ul class="hero__roles"></ul>
+                    </div>
+                    <div>
+                        <h2>Top players on hero</h2>
+                        <ul class='hero__players-list'></ul>
+                    </div>
+                </div>
+                <div class='container'>
+                    <div class='left-column'>
+                        <div class='hero__pickrate section'>
+                            <h2>Hero Winrate in Recent Matches</h2>
+                            <ul class="hero__popularity-list">
+                                <li class='hero__popularity-item'>
+                                    <h2>Herald</h2>
+                                    <img src="../img/ranks/Herald.png" alt="">
+                                    <h4>Total:</h4>
+                                    <div class='hero__popularity-total'></div>
+                                    <h4>Winrate:</h4>
+                                    <div class='hero__popularity-win'></div>
+                                </li>
+                                <li class='hero__popularity-item'>
+                                    <h2>Guardian</h2>
+                                    <img src="../img/ranks/Guardian.png" alt="">
+                                    <h4>Total:</h4>
+                                    <div class='hero__popularity-total'></div>
+                                    <h4>Winrate:</h4>
+                                    <div class='hero__popularity-win'></div>
+                                </li>
+                                <li class='hero__popularity-item'>
+                                    <h2>Crusader</h2>
+                                    <img src="../img/ranks/Crusader.png" alt="">
+                                    <h4>Total:</h4>
+                                    <div class='hero__popularity-total'></div>
+                                    <h4>Winrate:</h4>
+                                    <div class='hero__popularity-win'></div>
+                                </li>
+                                <li class='hero__popularity-item'>
+                                    <h2>Archon</h2>
+                                    <img src="../img/ranks/Archon.png" alt="">
+                                    <h4>Total:</h4>
+                                    <div class='hero__popularity-total'></div>
+                                    <h4>Winrate:</h4>
+                                    <div class='hero__popularity-win'></div>
+                                </li>
+                                <li class='hero__popularity-item'>
+                                    <h2>Legend</h2>
+                                    <img src="../img/ranks/Legend.png" alt="">
+                                    <h4>Total:</h4>
+                                    <div class='hero__popularity-total'></div>
+                                    <h4>Winrate:</h4>
+                                    <div class='hero__popularity-win'></div>
+                                </li>
+                                <li class='hero__popularity-item'>
+                                    <h2>Ancient</h2>
+                                    <img src="../img/ranks/Ancient.png" alt="">
+                                    <h4>Total:</h4>
+                                    <div class='hero__popularity-total'></div>
+                                    <h4>Winrate:</h4>
+                                    <div class='hero__popularity-win'></div>
+                                </li>
+                                <li class='hero__popularity-item'>
+                                    <h2>Divine</h2>
+                                    <img src="../img/ranks/Divine.png" alt="">
+                                    <h4>Total:</h4>
+                                    <div class='hero__popularity-total'></div>
+                                    <h4>Winrate:</h4>
+                                    <div class='hero__popularity-win'></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item-build__list section">
+                            <h2>Item Builds</h2>
+                            <ul>
+                                <h3>Start game:</h3>
+                                <div class="item-build__item start-game">
+
+                                </div>
+                                <h3>Early game:</h3>
+                                <div class="item-build__item early-game">
+
+                                </div>
+                                <h3>Mid game:</h3>
+                                <div class="item-build__item mid-game">
+
+                                </div>
+                                <h3>Late game:</h3>
+                                <div class="item-build__item late-game">
+
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hero__matchups section">
+                        <h2>Frequent Matchups</h2>
+                        <ul class="hero__matchups-list">
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                            <li class="hero__matchups-item">
+
+                                <div class='matchups__item-name'></div>
+                                <img class='matchups__item-img' src="" alt="">
+
+                                <div class='matchups__item-result'>
+                                    <div class="matchups__item-total"></div>
+                                    >
+                                    <div class="matchups__item-win"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class='footer__container'>
+                <div>
+                    <h4>Dota Links</h4>
+                    <ul>
+                        <li class='footer__media'><img src="../img/media/twitter.png"
+                                    alt="media"><a href="https://twitter.com/DOTA2">twitter</a></li>
+                        <li class='footer__media'><img src="../img/media/youtube.png"
+                                    alt="media"><a href="https://www.youtube.com/user/dota2">youtube</a></li>
+                        <li class='footer__media'><img src="../img/media/facebook.png"
+                                    alt="media"><a href="https://www.facebook.com/dota2/">facebook</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Feedback</h4>
+                    <ul>
+                        <li><a href="https://twitter.com/DOTA2">Feedback Forums</a>
+                            <p >For general feedback about the game.</p>
+                        </li>
+                        <li><a  href="https://www.youtube.com/user/dota2">Steam Support</a>
+                            <p >Visit the support site for any issues you may be having with your
+                                account.</p>
+                        </li>
+                        <li><a href="https://www.facebook.com/dota2/">Contact the Team</a>
+                            <p>To contact us directly about specific matters.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contacts</h4>
+                    <ul>
+                        <li><a  href="tel:+996706050800">+996-706-05-08-00</a>
+                            <p >For advertising.</p>
+                        </li>
+                        <li><a  href="mailto:arlen.manasov@icloud.com">arlen.manasov@icloud.com</a>
+                            <p>Questions.</p>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </footer>
+    <script type="module" src="../js/header.js"></script>
+    <script type='module' src="../js/hero.js"></script>
+</body>

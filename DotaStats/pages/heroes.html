@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon-16x16.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/heroes.css">
+    <title>Stats Dota2</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="header__logo">
+                <img class="header__logo-img" src="../img/logo.png" alt="logo">
+                <div class="header__logo-text">Dota 2 Stats</div>
+            </div>
+            <div class="header__navbar">
+                <a href="index.html">Main</a>
+                <a href="matches.html" class="header__matches-link">Matches</a>
+                <a href="heroes.html">Heroes</a>
+                <a href="players.html" class='header__players-link'>Players</a>
+            </div>
+        </div>
+        <div class="header__searchForm player-search">
+            <div class="search-form">
+                <input name='player' required placeholder="Enter player's id..." type="text" class="header__player-search-input">
+                <button class="header__player-search-btn">search</button>
+            </div>
+        </div>
+        <div class="header__searchForm match-search">
+            <div class="search-form">
+                <input name='match' required placeholder="Enter match id..." type="text" class="header__match-search-input">
+                <button class="header__match-search-btn">search</button>
+            </div>
+        </div>  
+    </header>
+    <div class="content">
+        <div class='inside-content'>
+            <ul class='tab-links'>
+                <li id='heroes__table' class='tab-link active-link'>
+                    <h3>All Heroes</h3>
+                </li>
+            </ul>
+            <div class="heroes__table tab-content">
+                <div class='heroes__table-container'>
+                    <div class='table__attribute'>
+                        <h1>Strength</h1>
+                        <img src="../img/str.jpg" class='attr__logo' alt="">
+                    </div>
+                    <div class='heroes__attr-section str'>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/abaddon_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Abaddon</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/alchemist_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Alchemist</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/axe_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Axe</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/beastmaster_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Beastmaster</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/brewmaster_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Brewmaster</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/bristleback_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Bristleback</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/centaur_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Centaur Warrunner</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/chaos_knight_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Chaos Knight</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/rattletrap_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Clockwerk</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/doom_bringer_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Doom</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/dragon_knight_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Dragon Knight</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/earth_spirit_full.png??" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Earth Spirit</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/earthshaker_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Earthshaker</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/elder_titan_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Elder Titan</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/huskar_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Huskar</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/wisp_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Io</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src="https://api.opendota.com/apps/dota2/images/heroes/kunkka_full.png?" alt="Aba" class="heroes__logo">
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Kunkka</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/legion_commander_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Legion Commander</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/life_stealer_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Lifestealer</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/lycan_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Lycan</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/magnataur_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Magnus</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/mars_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Mars</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/night_stalker_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Night Stalker</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/omniknight_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Omniknight</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/phoenix_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Phoenix</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/pudge_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Pudge</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/sand_king_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Sand King</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/slardar_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Slardar</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/snapfire_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Snapfire</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/spirit_breaker_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Spirit Breaker</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/sven_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Sven</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/tidehunter_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Tidehunter</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/shredder_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Timbersaw</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/tiny_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Tiny</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/treant_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Treant Protector</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/tusk_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Tusk</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/abyssal_underlord_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Underlord</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/undying_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Undying</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/skeleton_king_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Wraith King</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='heroes__table-container'>
+                    <div class='table__attribute'>
+                        <h1>Agility</h1>
+                        <img src="../img/agi.jpg" class='attr__logo' alt="">
+                    </div>
+                    <div class="heroes__attr-section agi">
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/antimage_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Anti-Mage</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/arc_warden_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Arc Warden</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/bloodseeker_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Bloodseeker</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/bounty_hunter_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Bounty Hunter</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/broodmother_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Broodmother</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/clinkz_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Clinkz</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/drow_ranger_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Drow Ranger</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/ember_spirit_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Ember Spirit</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/faceless_void_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Faceless Void</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/gyrocopter_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Gyrocopter</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/juggernaut_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Juggernaut</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/lone_druid_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Lone Druid</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/luna_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Luna</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/medusa_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Medusa</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/meepo_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Meepo</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/mirana_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Mirana</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/monkey_king_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Monkey King</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/morphling_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Morphling</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/naga_siren_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Naga Siren</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/nyx_assassin_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Nyx Assassin</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/pangolier_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Pangolier</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/phantom_assassin_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Phantom Assassin</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/phantom_lancer_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Phantom Lancer</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/razor_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Razor</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/riki_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Riki</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/nevermore_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Shadow Fiend</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/slark_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Slark</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/sniper_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Sniper</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/spectre_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Spectre</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/templar_assassin_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Templar Assassin</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/terrorblade_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Terrorblade</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/troll_warlord_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Troll Warlord</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/ursa_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Ursa</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/vengefulspirit_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Vengeful Spirit</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/venomancer_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Venomancer</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/viper_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Viper</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/weaver_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Weaver</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='heroes__table-container'>
+                    <div class='table__attribute'>
+                        <h1>
+                            Intelligence
+                        </h1>
+                        <img src="../img/int.jpg" class='attr__logo' alt="">
+                    </div>
+                    <div class="heroes__attr-section int">
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/ancient_apparition_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Ancient Apparition</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/bane_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Bane</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/batrider_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Batrider</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/chen_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Chen</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/crystal_maiden_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Crystal Maiden</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/dark_seer_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Dark Seer</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/dark_willow_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Dark Willow</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/dazzle_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Dazzle</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/death_prophet_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Death Prophet</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/disruptor_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Disruptor</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/enchantress_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Enchantress</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/enigma_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Enigma</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/grimstroke_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Grimstroke</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/invoker_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Invoker</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/keeper_of_the_light_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Keeper of the Light</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/leshrac_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Leshrac</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/lich_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Lich</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/lina_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Lina</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/lion_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Lion</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/furion_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Nature's Prophet</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/necrolyte_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Necrophos</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/ogre_magi_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Ogre Magi</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/oracle_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Oracle</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/obsidian_destroyer_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Outworld Devourer</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/puck_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Puck</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/pugna_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Pugna</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/queenofpain_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Queen of Pain</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/rubick_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Rubick</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/shadow_demon_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Shadow Demon</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/shadow_shaman_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Shadow Shaman</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/silencer_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Silencer</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/skywrath_mage_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Skywrath Mage</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/storm_spirit_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Storm Spirit</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/techies_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Techies</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/tinker_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Tinker</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/visage_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Visage</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/void_spirit_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Void Spirit</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/warlock_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Warlock</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/windrunner_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Windranger</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/winter_wyvern_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Winter Wyvern</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/witch_doctor_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Witch Doctor</div>
+                            </div>
+                        </div>
+                        <div class="heroes__hero-icon">
+                            <img src='https://api.opendota.com/apps/dota2/images/heroes/zuus_full.png?'class='heroes__logo'>
+                            <div class="modal">
+                                <div class="modal__figure"></div>
+                                <div class='modal__text'>Zeus</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class='footer__container'>
+                <div>
+                    <h4>Dota Links</h4>
+                    <ul>
+                        <li class='footer__media'><img src="../img/media/twitter.png"
+                                    alt="media"><a href="https://twitter.com/DOTA2">twitter</a></li>
+                        <li class='footer__media'><img src="../img/media/youtube.png"
+                                    alt="media"><a href="https://www.youtube.com/user/dota2">youtube</a></li>
+                        <li class='footer__media'><img src="../img/media/facebook.png"
+                                    alt="media"><a href="https://www.facebook.com/dota2/">facebook</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Feedback</h4>
+                    <ul>
+                        <li><a href="https://twitter.com/DOTA2">Feedback Forums</a>
+                            <p >For general feedback about the game.</p>
+                        </li>
+                        <li><a  href="https://www.youtube.com/user/dota2">Steam Support</a>
+                            <p >Visit the support site for any issues you may be having with your
+                                account.</p>
+                        </li>
+                        <li><a href="https://www.facebook.com/dota2/">Contact the Team</a>
+                            <p>To contact us directly about specific matters.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contacts</h4>
+                    <ul>
+                        <li><a  href="tel:+996706050800">+996-706-05-08-00</a>
+                            <p >For advertising.</p>
+                        </li>
+                        <li><a  href="mailto:arlen.manasov@icloud.com">arlen.manasov@icloud.com</a>
+                            <p>Questions.</p>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </footer>
+    <script type="module" src="../js/header.js"></script>
+    <script type='module' src="../js/heroes.js"></script>
+</body>
+
+</html>
