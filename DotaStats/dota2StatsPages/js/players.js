@@ -189,7 +189,7 @@ const getPlayer = async(id) => {
   //Функция собирает из запросов все нужные данные, а потом передает их в качестве аргумента setDataToPage
   let content = document.querySelector('.content');
   let contentCopy = content.innerHTML;
-  content.innerHTML='<img class="preloader" src="/img/preloader.gif">';
+  content.innerHTML='<img class="preloader" src="../img/preloader.gif">';
   let result = await getPlayerFromApi(id); //получаем данные игрока
   if (result.error) {
     content.innerHTML=contentCopy;
