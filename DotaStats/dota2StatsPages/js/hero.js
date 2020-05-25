@@ -12,7 +12,7 @@ window.onload = () => {
 const addMatchupsToPage=async(hero,heroes)=>{
     let content = document.querySelector('.hero__matchups-list');
     let contentCopy = content.innerHTML;
-    content.innerHTML='<img class="preloader" src="/img/preloader.gif">';
+    content.innerHTML='<img class="preloader" src="../img/preloader.gif">';
     let matchups = await getHeroMatchups(hero.id);
     console.log('matchups');
     matchups=matchups.slice(0,20);
