@@ -144,6 +144,7 @@ const getMatch = (matchId) => {
 };
 
 const searchMatches = () => {
+  console.log('searchMatches');
   //Берет значение input'а и вызывает getMatch()
   let text = document.querySelector(".matchSearchInput").value;
   document.querySelector(".matches__result").innerHTML = "Loading...";
