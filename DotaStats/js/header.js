@@ -20,12 +20,13 @@ document.querySelector(".header__players-link").onclick = (e) => {
   e.preventDefault();
   showSearchForm(".player-search");
 };
-document.querySelector('.header__player-search-btn').onclick=()=>{
-    console.log('header is here1');
+document.querySelector('.player-search').onsubmit=(e)=>{
+    e.preventDefault();
     let text = document.querySelector('.header__player-search-input').value;  
     redirectPageWithParams('players.html', 'player', text);
 }
-document.querySelector('.header__match-search-btn').onclick=()=>{
+document.querySelector('.match-search').onsubmit=(e)=>{
+    e.preventDefault();
     let text = document.querySelector('.header__match-search-input').value;
     redirectPageWithParams('matches.html', 'match', text);
 }    
