@@ -1,5 +1,5 @@
 import { redirectPageWithParams } from "./workWithUrl.js";
-import { getHeroesStatsFromApi, getHeroes, getHeroIconUrl } from "./queriesToApi/heroesApi.js";
+import { getHeroesStatsFromApi, getHeroes } from "./queriesToApi/heroesApi.js";
 import { getItems } from "./queriesToApi/itemsApi.js";
 
 window.onload=()=>{

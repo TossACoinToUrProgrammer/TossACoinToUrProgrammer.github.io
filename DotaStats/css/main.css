@@ -41,10 +41,14 @@ header>div{
 }
 .header__navbar {
   line-height: 60px;
-  width: 500px;
   font-family: "Rubik";
   font-size: 1.6em;
   text-align: center;
+}
+@media screen and (min-width:850px){
+  .header__navbar {
+    width: 500px;
+  }
 }
 .header__logo-img {
   height: 50px;
@@ -53,6 +57,42 @@ header>div{
 .header__logo-text {
   font-size: 1.5em;
   color: #fff;
+}
+@media screen and (max-width:850px){
+  header>div{
+    padding: 10px;
+  }
+  .header__navbar{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+    transition: all 1s !important;
+  }
+  .active-menu .header__navbar{
+    height: 250px;
+  }
+  .header__navbar a{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  }
+  .header__logo{
+    width: 100%;
+    padding: 10px;
+  }
+  .header__burger{
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/menu.svg');
+    background-size: cover;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: auto;
+  }
+  .active-menu .header__burger{
+    background-image: url('../img/cancel.png');
+  }
 }
 .header__navbar a {
   font-size: 0.9em;
@@ -97,19 +137,6 @@ header>div{
   margin: 0;
   text-align: right;
 }
-.content {
-  max-width: 1920px;
-  margin: auto;
-  background: linear-gradient(
-    to right,
-    rgba(103, 80, 119, 0.5),
-    rgb(53, 112, 115),
-    rgba(9, 109, 100, 0.5)
-  );
-  color: #fff;
-  padding: 30px;
-  min-height: 400px;
-}
 .search-form>input{
   min-width: 300px;
   width: 30%;
@@ -126,7 +153,37 @@ header>div{
   font-size: 13px;
   color:rgb(53, 112, 115);
 }
-
+@media screen and (max-width:850px){
+  .active-menu .header__searchForm{
+    display: block;
+  }
+  .header__searchForm{
+    display: none;
+  }
+  .header__searchForm{
+    margin-top: -10px;
+    padding-right: 10px;
+  }
+  .search-form>input{
+    min-width: 200px;
+  }
+  .search-form>button{
+    min-width: 100px;
+  }
+}
+.content {
+  max-width: 1920px;
+  margin: auto;
+  background: linear-gradient(
+    to right,
+    rgba(103, 80, 119, 0.5),
+    rgb(53, 112, 115),
+    rgba(9, 109, 100, 0.5)
+  );
+  color: #fff;
+  padding: 30px;
+  min-height: 400px;
+}
 ::-webkit-scrollbar {
   width: 15px;
   height: 15px;
