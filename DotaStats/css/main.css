@@ -185,6 +185,10 @@ header>div{
   padding: 30px;
   min-height: 400px;
 }
+.inside-content{
+  max-width: 1600px;
+  margin: auto;
+}
 ::-webkit-scrollbar {
   width: 15px;
   height: 15px;

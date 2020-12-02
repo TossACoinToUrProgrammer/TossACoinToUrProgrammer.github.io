@@ -34,8 +34,7 @@ a{
 }
 
 .inside-content{
-    max-width: 90%;
-    max-width: 1981px;
+    width: 90%;
     margin: auto;
 }
 .tab-content{
