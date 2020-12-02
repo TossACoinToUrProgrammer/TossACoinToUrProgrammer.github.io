@@ -127,7 +127,7 @@ const setDataToPage=(player,matches, heroesStats,wl,err='')=>{
     <li id='player__heroes' class='tab-link'> <h3>Heroes</h3> </li>
     <li id='player__totals' class='tab-link'> <h3>Totals</h3> </li>
     </ul>
-    <div class='player__tabs-container'>
+    <div class='scroll-container'>
       
     <ul class='player__recent-matches tab-content'>
     <h3>Recent Matches: </h3>

@@ -23,9 +23,6 @@ li{
 .player__info a{
     color: white;
 }
-.player__tabs-container{
-    overflow: auto;
-}
 .tab-content{
     min-width: 750px;
 }

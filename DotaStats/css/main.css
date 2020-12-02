@@ -189,6 +189,15 @@ header>div{
   max-width: 1600px;
   margin: auto;
 }
+.scroll-container{
+  overflow: auto;
+}
+@media screen and (max-width: 1080px){
+  .scroll-container{  
+    border-right: 10px solid rgba(9, 109, 100, 0.5);
+    border-left: 10px solid rgba(9, 109, 100, 0.5);
+  }
+}
 ::-webkit-scrollbar {
   width: 15px;
   height: 15px;

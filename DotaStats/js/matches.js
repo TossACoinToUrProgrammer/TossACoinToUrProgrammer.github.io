@@ -95,7 +95,7 @@ const setDataToPage = (match, err = "") => {
        <h3>${match.dire_score}  </h3>
     </div>
   </div>
-  <div class='matches__list-container'>
+  <div class='scroll-container'>
     <ul class="matches__list">
       <ul class="list">
           <li class="item__account">Player</li>
