@@ -5,17 +5,33 @@ li{
 .player__info{
     display: flex;
     width: 800px;
+    max-width: 100%;
     justify-content: start;
-
+    flex-flow: row wrap;
 }
 .player__info>img{
     margin-right: 30px;
+}
+@media screen and (max-width: 600px){
+    .player__info>img{
+        width: 150px;
+    } 
 }
 .player__wl h3{
     color: orange;
 }
 .player__info a{
     color: white;
+}
+.player__tabs-container{
+    overflow: auto;
+}
+.tab-content{
+    min-width: 750px;
+}
+.tab-link{
+    display: flex;
+    align-items: center;
 }
 ul.player__recent-matches,ul.player__heroes{
     padding: 15px;

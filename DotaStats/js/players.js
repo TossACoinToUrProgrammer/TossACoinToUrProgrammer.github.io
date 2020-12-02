@@ -127,40 +127,43 @@ const setDataToPage=(player,matches, heroesStats,wl,err='')=>{
     <li id='player__heroes' class='tab-link'> <h3>Heroes</h3> </li>
     <li id='player__totals' class='tab-link'> <h3>Totals</h3> </li>
     </ul>
-  <ul class='player__recent-matches tab-content'>
-  <h3>Recent Matches: </h3>
-    <ul class="player__recent-match">
-        <li class="item__result">Result</li>        
-        <li class="item__match-id">Match id</li>        
-        <li class="item__hero-icon">Hero</li>
-        <li class="item__hero"></li>
-        <li class="item__kills">K</li>
-        <li class="item__deaths">D</li>
-        <li class="item__assists">A</li>
-        <li class="item__lastHitsDen">LH</li>
-        <li class="item__dmg">Dmg</li>
-        <li class="item__gpm">GPM</li>
-        <li class="item__xpm">XPM</li>
-        <li class="item__towerDmg">TD</li> 
-        <li class="item__duration">Duration</li>
+    <div class='player__tabs-container'>
+      
+    <ul class='player__recent-matches tab-content'>
+    <h3>Recent Matches: </h3>
+      <ul class="player__recent-match">
+          <li class="item__result">Result</li>        
+          <li class="item__match-id">Match id</li>        
+          <li class="item__hero-icon">Hero</li>
+          <li class="item__hero"></li>
+          <li class="item__kills">K</li>
+          <li class="item__deaths">D</li>
+          <li class="item__assists">A</li>
+          <li class="item__lastHitsDen">LH</li>
+          <li class="item__dmg">Dmg</li>
+          <li class="item__gpm">GPM</li>
+          <li class="item__xpm">XPM</li>
+          <li class="item__towerDmg">TD</li> 
+          <li class="item__duration">Duration</li>
+      </ul>
     </ul>
-  </ul>
-  <ul class='player__heroes tab-content'>
-    <h3>Heroes: </h3>
-    <ul class='player__hero'>
-      <li class='item__hero'>Hero</li>
-      <li class='item__hero-icon'></li>
-      <li class='item__hero-total'>Games</li>
-      <li class='item__hero-wins'>Win</li>
-      <li class='item__hero-total'>With games</li>
-      <li class='item__hero-wins'>Win with</li>
-      <li class='item__hero-total'>Against games</li>
-      <li class='item__hero-wins'>Win against</li>
-    </ul>  
-    ${getPlayerHeroesHtml(getHeroes(), heroesStats).join('')}
-  </ul>
-  <ul class='player__totals tab-content'>
-  </ul>
+    <ul class='player__heroes tab-content'>
+      <h3>Heroes: </h3>
+      <ul class='player__hero'>
+        <li class='item__hero'>Hero</li>
+        <li class='item__hero-icon'></li>
+        <li class='item__hero-total'>Games</li>
+        <li class='item__hero-wins'>Win</li>
+        <li class='item__hero-total'>With games</li>
+        <li class='item__hero-wins'>Win with</li>
+        <li class='item__hero-total'>Against games</li>
+        <li class='item__hero-wins'>Win against</li>
+      </ul>  
+      ${getPlayerHeroesHtml(getHeroes(), heroesStats).join('')}
+    </ul>
+    <ul class='player__totals tab-content'>
+    </ul>
+    </div>
   `;
   
   let heroes = getHeroes(); //получаем список героев из сервера

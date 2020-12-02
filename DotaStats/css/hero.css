@@ -6,6 +6,9 @@ a{
     text-decoration: none;
     color: white;
 }
+.hero-stats__page .inside-content{
+    overflow: auto;
+}
 .hero__header{
     display: flex;
     flex-flow: row wrap;
@@ -48,6 +51,7 @@ a{
 }
 .hero-stats{
     padding: 20px;
+    min-width: 1000px;
 }
 .hero__roles{
     display: flex;

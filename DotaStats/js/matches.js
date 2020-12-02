@@ -95,23 +95,25 @@ const setDataToPage = (match, err = "") => {
        <h3>${match.dire_score}  </h3>
     </div>
   </div>
-  <ul class="matches__list">
-    <ul class="list">
-        <li class="item__account">Player</li>
-        <li class="item__hero">Hero</li>
-        <li class="item__hero-icon"></li>
-        <li class="item__lvl">lvl</li>
-        <li class="item__kills">K</li>
-        <li class="item__deaths">D</li>
-        <li class="item__assists">A</li>
-        <li class="item__lastHitsDen">LH/D</li>
-        <li class="item__dmg">Dmg</li>
-        <li class="item__heal">Healed</li>
-        <li class="item__totalGold">total gold</li>
-        <li class="item__towerDmg">TD</li>
-        <ul class="item__items-list">Items</ul>
+  <div class='matches__list-container'>
+    <ul class="matches__list">
+      <ul class="list">
+          <li class="item__account">Player</li>
+          <li class="item__hero">Hero</li>
+          <li class="item__hero-icon"></li>
+          <li class="item__lvl">lvl</li>
+          <li class="item__kills">K</li>
+          <li class="item__deaths">D</li>
+          <li class="item__assists">A</li>
+          <li class="item__lastHitsDen">LH/D</li>
+          <li class="item__dmg">Dmg</li>
+          <li class="item__heal">Healed</li>
+          <li class="item__totalGold">total gold</li>
+          <li class="item__towerDmg">TD</li>
+          <ul class="item__items-list">Items</ul>
+      </ul>
     </ul>
-  </ul>
+  </div>
   <div>
   <h3>Chat:</h3>
   <ul class="match__chat-block">

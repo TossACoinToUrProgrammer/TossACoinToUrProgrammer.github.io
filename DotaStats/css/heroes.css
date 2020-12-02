@@ -1,6 +1,6 @@
 .inside-content{
-    max-width: 90%;
-    max-width: 1981px;
+    width: 90%;
+    max-width: 1600px;
     margin: auto;
 }
 .heroes__table{
@@ -19,6 +19,20 @@
     border-style: inset;
     background-color: rgba(68, 86, 122, 0.6);
 }
+@media screen and (max-width: 550px){
+    .inside-content{
+        width: 95%;
+    }
+    .heroes__table-container{
+        padding: 5px;
+    }
+    .heroes__table{
+        padding: 5px;
+    }
+    .content.heroes-page {
+        padding: 10px;
+    }
+}
 .table__attribute{
     display: flex;
     justify-content: center;
@@ -32,6 +46,11 @@
     flex-flow: row wrap;
     justify-content: start;
 }
+@media screen and (max-width:850px){
+    .heroes__attr-section{
+        justify-content: center;
+    }
+}
 .heroes__hero-icon,.heroes__hero-icon img, .modal { 
     width: 100px;
     height: 55px;
@@ -40,6 +59,20 @@
     border-radius: 50%;
     width: 70px;
     height: 60px;
+}
+@media screen and (max-width: 550px){
+    .heroes__hero-icon,.heroes__hero-icon img, .modal { 
+        width: 80px;
+        height: 55px;
+    }
+    .attr__logo{
+        width: 50px;
+        height: 50px;
+    }
+    .table__attribute h1{
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
 }
 .modal{
     color: white;
