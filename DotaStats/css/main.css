@@ -189,6 +189,11 @@ header>div{
   max-width: 1600px;
   margin: auto;
 }
+@media screen and (max-width: 900px){
+  .inside-content{
+      width: 97%;
+  }
+}
 .scroll-container{
   overflow: auto;
 }

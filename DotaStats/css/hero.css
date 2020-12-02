@@ -35,11 +35,6 @@ a{
     width: 90%;
     margin: auto;
 }
-@media screen and (max-width: 900px){
-    .inside-content{
-        width: 97%;
-    }
-}
 .tab-content{
     background-color: rgba(9, 52, 63, 0.6);
 }
