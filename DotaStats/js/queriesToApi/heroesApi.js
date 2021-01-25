@@ -1,11 +1,14 @@
 const baseUrl = "https://api.opendota.com/api/heroes";
 const heroesStats='https://api.opendota.com/api/heroStats';
 
-const getHeroesFromApi = async () => {
+export const getHeroesFromApi = async () => {
   if (!localStorage.getItem("heroes")) {
     let heroes = await fetch(baseUrl);
     heroes = await heroes.json();
     localStorage.setItem("heroes", JSON.stringify(heroes));
+    return heroes;
+  } else {
+    return JSON.parse(localStorage.getItem('heroes'));
   }
 };
 export const getHeroesStatsFromApi=async()=>{
@@ -13,6 +16,9 @@ export const getHeroesStatsFromApi=async()=>{
     let heroes = await fetch(heroesStats);
     heroes = await heroes.json();
     localStorage.setItem("heroesStats", JSON.stringify(heroes));
+    return heroes;
+  } else {
+    return JSON.parse(localStorage.getItem('heroesStats'));
   }
 }
 export const getHeroesStats=()=>{

@@ -1,5 +1,5 @@
 import { getMatchFromApi } from "./queriesToApi/matchesApi.js";
-import {getHeroIconUrl, getHero, getHeroes } from "./queriesToApi/heroesApi.js";
+import {getHeroIconUrl, getHero, getHeroes, getHeroesFromApi } from "./queriesToApi/heroesApi.js";
 import { getPlayerFromApi } from "./queriesToApi/playersApi.js";
 import { getAllUrlParams, redirectPageWithParams } from "./workWithUrl.js";
 import { getItems as getItemsFromApi, getItem, getItemModalHtml } from "./queriesToApi/itemsApi.js";
@@ -28,8 +28,8 @@ const getItemsListHtml=(player)=>{
           ${getItemHtml(getItem(player.item_neutral))/**Нейтральный предмет */}
         </ul>`
 };
-const getPlayerListHtml=(players)=>{
-  let heroes = getHeroes(); //получаем список героев из сервера
+const getPlayerListHtml=async(players)=>{
+  let heroes = await getHeroesFromApi(); //получаем список героев из сервера
   return players.map((player, index) => {
     //получаем html список с данными каждого из 10 игроков
 
@@ -120,8 +120,8 @@ const setDataToPage = (match, err = "") => {
     ${match.chat ? getChatBlock(match.chat) : 'Chat unvailable'}
   </ul>
   </div>`;
-  (()=>{ //После того как вся разметка выше была вставлена в страницу, выполниться эта функция, вставляем строки в таблицу недавних матчей
-    let row=getPlayerListHtml(match.players); //Получаем все строки таблицы счета
+  (async()=>{ //После того как вся разметка выше была вставлена в страницу, выполниться эта функция, вставляем строки в таблицу недавних матчей
+    let row= await getPlayerListHtml(match.players); //Получаем все строки таблицы счета
     row.forEach(item=>document.querySelector('.matches__list').insertAdjacentElement('beforeend',item));
   })();
 };

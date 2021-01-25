@@ -1,6 +1,6 @@
 import { getAllUrlParams, redirectPageWithParams } from "./workWithUrl.js";
 import { getPlayerFromApi, getPlayerWinLose, getPlayerRecentMatches as getPlayerRecentMatchesFromApi, getPlayerHeroesStats, getPlayerTotals  } from "./queriesToApi/playersApi.js";
-import { getHeroIconUrl, getHeroes, getHero, getHeroByName } from "./queriesToApi/heroesApi.js";
+import { getHeroIconUrl, getHero, getHeroByName, getHeroesFromApi } from "./queriesToApi/heroesApi.js";
 
 document.querySelector(".search__btn").onclick = () => searchPlayer();
 
@@ -89,14 +89,14 @@ const changeTabContent=(e)=>{
   e.currentTarget.classList.add('active-link');
   
 };
-const setDataToPage=(player,matches, heroesStats,wl,err='')=>{
+const setDataToPage=(player,matches, heroesStats,wl, heroes,err='')=>{
   //Функция реализует Отрисовкy контента
   let div = document.querySelector(".player__result");
   div.innerHTML = "";
   if (err) {   //вставляем текст ошибки, если таковая имеется
     div.insertAdjacentHTML(
       "afterbegin",
-      `<h1 class="error-title"> ${err}</h1>`
+      `<h1 class="error-title"> ${err}, may be blocked account</h1>`
     );
     return 0;
   }
@@ -159,14 +159,13 @@ const setDataToPage=(player,matches, heroesStats,wl,err='')=>{
         <li class='item__hero-total'>Against games</li>
         <li class='item__hero-wins'>Win against</li>
       </ul>  
-      ${getPlayerHeroesHtml(getHeroes(), heroesStats).join('')}
+      ${getPlayerHeroesHtml(heroes, heroesStats).join('')}
     </ul>
     <ul class='player__totals tab-content'>
     </ul>
     </div>
   `;
   
-  let heroes = getHeroes(); //получаем список героев из сервера
   addRecentMatchesListToPage(matches,heroes);
 
   (async()=>{//функция вызывается после того как разметка выше отрисована, так что можно обращаться к ее элементам
@@ -196,21 +195,22 @@ const getPlayer = async(id) => {
   let result = await getPlayerFromApi(id); //получаем данные игрока
   if (result.error) {
     content.innerHTML=contentCopy;
-    setDataToPage(null,null, null,null, result.error);
+    setDataToPage(null,null, null,null, null, result.error);
     history.pushState(null, null, '?');
     return 0;
   }
-  if (result==null) {
+  if (!result) {
     content.innerHTML=contentCopy;
-    setDataToPage(null,null, null,null, 'Player not found');
+    setDataToPage(null,null, null,null, null, 'Player not found');
     history.pushState(null, null, '?');
     return 0;
   }
   let matches = await getPlayerRecentMatchesFromApi(id);  //вызываем функцию чтобы получить недавние матчи игрока
   let heroesStats=await getPlayerHeroesStats(id);
   let wl = await getPlayerWinLose(id); //Получаем из сервера винрейт игрока
+  let heroes = await getHeroesFromApi();
   content.innerHTML=contentCopy;
-  setDataToPage(result,matches, heroesStats, wl);
+  setDataToPage(result,matches, heroesStats, wl, heroes);
 };
 
 const searchPlayer = () => {

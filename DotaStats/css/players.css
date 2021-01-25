@@ -2,6 +2,9 @@
 li{
     list-style: none;
 }
+.error-title{
+    margin-top: 30px;
+}
 .player__info{
     display: flex;
     width: 800px;
