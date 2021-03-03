@@ -86,7 +86,7 @@ header {
       rgba(198, 108, 73, 0.3),
       rgba(198, 108, 73, 0.3)
     ),
-    url("/images/bg.png");
+    url("./images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -149,13 +149,13 @@ header a {
     width: 40px;
     height: 30px;
 
-    background: url("/images/burger.svg") no-repeat;
+    background: url("./images/burger.svg") no-repeat;
     background-size: 90%;
     background-position: center;
     cursor: pointer;
   }
   .active.burger-btn {
-    background: url("/images/close.png");
+    background: url("./images/close.png");
     background-size: cover;
     background-position: center;
   }
