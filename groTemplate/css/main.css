@@ -139,12 +139,24 @@ header a {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1150px) {
+@media (max-width: 1150px) {
   .menu {
     width: fit-content;
   }
 }
-@media screen and (max-width: 750px) {
+@media (max-width: 750px) {
+  header {
+    min-height: auto;
+    padding-top: 50px;  
+    background: linear-gradient(
+      0deg,
+      rgba(198, 108, 73, 0.3),
+      rgba(198, 108, 73, 0.3)
+    ),
+    url("../images/bgSmall.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .burger-btn {
     width: 40px;
     height: 30px;
@@ -176,10 +188,6 @@ header a {
   }
 }
 @media (max-width: 600px) {
-  header {
-    padding-top: 50px;
-    min-height: auto;
-  }
   .introduction__title {
     font-size: 34px;
   }
@@ -188,16 +196,6 @@ header a {
   }
 }
 @media (max-width: 450px) {
-  header {
-    background: linear-gradient(
-      0deg,
-      rgba(198, 108, 73, 0.3),
-      rgba(198, 108, 73, 0.3)
-    ),
-    url("../images/bg-small.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
   .navbar {
     justify-content: center;
   }
@@ -300,7 +298,6 @@ header a {
   }
 }
 @media (max-width: 450px) {
-
   .profile-picture {
     width: 80%;
   }
