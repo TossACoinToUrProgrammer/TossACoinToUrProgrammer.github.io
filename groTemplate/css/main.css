@@ -188,6 +188,16 @@ header a {
   }
 }
 @media (max-width: 450px) {
+  header {
+    background: linear-gradient(
+      0deg,
+      rgba(198, 108, 73, 0.3),
+      rgba(198, 108, 73, 0.3)
+    ),
+    url("../images/bg-small.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .navbar {
     justify-content: center;
   }
@@ -290,6 +300,7 @@ header a {
   }
 }
 @media (max-width: 450px) {
+
   .profile-picture {
     width: 80%;
   }
