@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.slider-view {
+  margin: auto;
+  border: 2px solid gray;
+  height: 500px;
+  width: 900px;
+  position: relative;
+  overflow: hidden;
+  max-width: 90%;
+}
+.slider__btn {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.453);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.slider__btn:hover {
+  background-color: rgba(128, 128, 128, 0.652);
+  color: white;
+}
+.slider__btn i {
+  font-size: xx-large;
+}
+.slider__btn-prev {
+  left: 0;
+}
+.slider__btn-next {
+  right: 0;
+}
+
+.slider {
+  display: flex;
+  height: 100%;
+  -webkit-transition: all 1s !important;
+  -moz-transition: all 1s !important;
+  -o-transition: all 1s !important;
+  transition: all 1s !important;
+
+  /* стиль нужен для правильного взаимодействия с js */
+  transform: translateX(-100%);
+}
+.slide {
+  display: block;
+  min-width: 100%;
+  height: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
