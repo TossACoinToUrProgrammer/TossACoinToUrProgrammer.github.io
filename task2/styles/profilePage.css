@@ -1,0 +1,108 @@
+.profile {
+    display: flex;
+
+    margin-top: 50px;
+}
+.leftside,
+.rightside {
+    margin: 20px;
+    padding: 20px;
+
+    background-color: #f1f1f1;
+    border-radius: 15px;
+}
+.leftside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 30%;
+    height: fit-content;
+}
+.rightside {
+    width: 70%;
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+.tabs {
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(5, 142, 206);
+}
+.tab-link {
+    margin-right: 15px;
+    cursor: pointer;
+}
+.tab-link:not(:first-child):before {
+    content: '';
+    margin-right: 15px;
+    height: 60%;
+    border-left: 1px solid gray;
+}
+.tab-link:hover span{
+    background-color: rgba(112, 128, 144, 0.466);
+}
+.tab-link.active {
+    color: orange;
+}
+.tab {
+    display: none;
+}
+.tab.active {
+    display: block;
+}
+.todo {
+    display: flex;
+    justify-content: space-between;
+
+    width: 400px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(221, 220, 220, 0.76);
+}
+.todo__title {
+    max-width: 60%;
+}
+.todo.done .todo__title{
+    text-decoration: line-through;
+    color: gray;
+}
+.todo__delete {
+    background: none;
+    border: none;
+}
+.post {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(221, 220, 220, 0.76);
+}
+.post__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.post-form {
+    display: flex;
+    margin: 15px;
+    padding: 10px;
+}
+.post-form input{
+    height: 30px;
+    width: 400px;
+    margin-right: 15px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: none;
+}   
+.post-form button {
+    height: 30px;
+    border: none;
+    background-color: steelblue;
+    color: white;
+    padding: 0 10px;
+    border-radius: 5px;
+}

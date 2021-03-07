@@ -6,19 +6,16 @@ function sliderInit() {
   const $slides = $slider.querySelectorAll("#slide")
   const slidesLen = $slides.length
   const SLIDE_TRANSITION_TIME = 1000
+
   let currentSlide = 0
   let $indicators = []
-
   let interval
 
   init()
   function init() {
     //for the cyclical effect, clone the last and first slide along the edges of the slider
     $slider.insertAdjacentElement("beforeend", $slides[0].cloneNode(true))
-    $slider.insertAdjacentElement(
-      "afterbegin",
-      $slides[slidesLen - 1].cloneNode(true)
-    )
+    $slider.insertAdjacentElement("afterbegin", $slides[slidesLen - 1].cloneNode(true))
 
     indicatorsInit()
     buttonsInit()

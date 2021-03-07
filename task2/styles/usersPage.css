@@ -1,0 +1,34 @@
+.users-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  
+    margin-top: 30px;
+  }
+  .user {
+    padding: 15px;
+  
+    border-radius: 15px;
+    background-color: #f1f1f1;
+  }
+  .user > div {
+    margin-bottom: 10px;
+  }
+  .user__key {
+    color: rgb(42, 82, 99);
+    margin-right: 5px;
+  }
+  .user__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .user__avatar {
+    height: 80px;
+    width: auto;
+  }
+  .user__profile-link {
+    color: rgb(32, 107, 137);
+  }
+  
+  
