@@ -1,4 +1,4 @@
-import { getUser, getTodos, getPosts, createPost } from "../queries.js"
+import { getUser, getTodos, getPosts, createPost } from "./queries.js"
 import { errorHTML, preloaderHTML } from "../utils.js"
 
 const userId = window.location.search.split("=")[1]
@@ -54,10 +54,8 @@ function todosHTML(todos) {
   return todos
     .map(
       (todo, i) => `
-    <li class="todo">
-      <span class="todo__num">${i}</span>
+    <li class="todo ${todo.completed && "done"}">
       <span class="todo__title">${todo.title}</span>
-      <button class='todo__delete'>X</button>
     </li>
     `).join("")
 }

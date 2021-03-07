@@ -1,4 +1,4 @@
-import { getUsers } from "../queries.js"
+import { getUsers } from "./queries.js"
 import { errorHTML, preloaderHTML } from "../utils.js"
 
 const $root = document.querySelector(".content")
